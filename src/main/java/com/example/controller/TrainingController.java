@@ -20,7 +20,7 @@ public class TrainingController {
     private TrainingService service;
 
     // for creating new training center
-    @PostMapping(value = "/traingpost",consumes = "application/json;charset=UTF-8")
+    @PostMapping(value = "/trainingpost",consumes = "application/json;charset=UTF-8")
     public ResponseEntity<TrainingCenter> createTrainingCenter(@Valid @RequestBody TrainingCenter trainingCenter) {
     	System.out.println(trainingCenter.getContactPhone());
         TrainingCenter tc= service.save(trainingCenter);
